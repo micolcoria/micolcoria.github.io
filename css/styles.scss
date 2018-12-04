@@ -1,0 +1,187 @@
+body {
+    background-image: url("../img/fondo.jpg")
+}
+// VARIABLES DE FUENTES:
+$font-title: 'Pacifico', cursive;
+$color-title: dodgerblue;
+$font-p: 'Pangolin', cursive;
+
+// ESTILOS DE LA HOME:
+.home {
+    margin: auto;
+    padding: 15px;
+    width: 400px;
+    text-align: center;
+    background-color: #f9e9e0;
+    border-radius: 15px;
+    border: 10px solid black;
+
+    .title {
+        font-family: $font-title;
+        color: $color-title;
+        display: flex;
+        justify-content: center;
+    }
+    .p {
+        font-family: $font-p;
+        margin: 10px;
+    }
+    #cartel {
+        color: red;
+    }
+    .input {
+        width: 80%;
+    }
+    .level {
+        width: 80%;
+        font-family: $font-p;
+        background-color: orange;
+        color: white;
+        margin: 5px;
+        border: 3px solid transparent;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+}
+
+// ESTILOS DEL TABLERO:
+.table {
+    .title {
+        font-family: $font-title;
+        color: $color-title;
+    }
+    p {
+        font-family: $font-p;
+    }
+}
+
+.table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9e9e0;
+    border-radius: 15px;
+    border: 10px solid black;
+    position: relative;
+    .tablero1 {
+        h1 {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+        }
+        #tries {
+            color:dodgerblue;
+        }
+    }
+    .tablero {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 70%;
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+.turn {
+    transform: rotateY(180deg);
+    transition: 0.6s;
+    transform-style: preserve-3d;
+}
+
+    .tapada {
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        border: 2px solid orange;
+        border-radius: 5px;
+        margin: 5px;
+    }
+    
+    .intentos {
+        font-family: $font-p;
+        text-align: center;
+        width: 600px;
+        border: 2px solid blue;
+    }
+}
+
+// MODAL FINAL:
+.final {
+    margin: auto;
+    padding: 15px;
+    width: 500px;
+    text-align: center;
+    background-color: #f9e9e0;
+    border-radius: 15px;
+    border: 10px solid black;
+    position: absolute;
+    left: 20%;
+    top: 0;
+    p {
+        font-family: $font-p;
+    }
+    .volver {
+        width: 80%;
+        font-family: $font-p;
+        color: white;
+        background-color: orange;
+        border: 3px solid transparent;
+        cursor: pointer;
+
+    }
+}
+
+.ranking {
+    display: flex;
+    margin: auto;
+    width: 300px;
+    border: 1px solid black;
+    justify-content: center;
+    justify-content: space-around;
+    text-align: center;
+    .player, .levell {
+        border-right: 1px solid black;
+    }
+    .datos {
+        font-family: $font-p;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        font-size: 12px;
+        color: dodgerblue;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .column {
+        font-family: $font-p;
+        text-align: center;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.idem {
+    opacity: 0.5;
+    color: gray;
+}
+
+.pointer {
+    pointer-events: none;
+}
+
+@media(max-width: 800px) {
+    .table .tablero {
+        width: 100%;
+    }
+    .tapada img {
+        width: 50px;
+        height: 50px;
+    }
+}

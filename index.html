@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <title>Memotest</title>
+
+</head>
+
+<body>
+    
+    <!-- HOME -->
+    <div id='home' class='home'>
+        <h1 id='title' class='title'>Memotest</h1>
+        <p class='p'>¡Hola 👋! Vamos a jugar al Memotest</p>
+        <p class='p'>Pero antes de empezar...</p>
+        <p class='p'>¿Cuál es tu nombre❓</p>
+        <!-- NOMBRE DEL/DE LA JUGADOR/A: -->
+        <input class='input' type='text' />
+        <!-- SELECCION DE NIVEL: -->
+        <p class='p'>¿Con qué dificultad te gustaría jugar?</p>
+        <button id='facil' class='level'>FACIL</button><br />
+        <button id='intermedio' class='level'>INTERMEDIO</button><br />
+        <button id='experto' class='level'>EXPERTO</button>
+        <!-- CARTEL DE ERROR AL NO PONER EL NOMBRE -->
+        <p id='cartel' class='p hidden'>¡Upsi! Necesitamos tu nombre </p> 
+    </div>
+
+    <!-- TABLERO DE IMAGENES -->
+    <div id='table' class='table hidden'>
+        <div class='tablero1'>
+            <h1 id='title' class='title'>Memotest</h1>
+            <p id='nameInput' class='p'>Hola <span id='value'></span></p>
+            <p>Encontrá todos los pares en menos de <span id='tries'></span> intentos</p>
+            <p>Nivel: </p>
+            <p id='levelRequired'></p>
+        </div>
+        <div class='tablero'>
+            <div class='tapada'><img data-id='1' id='img-1' src='img/tapada.jpg' alt='' data-img=''></div>
+            <div class='tapada'><img data-id='2' id='img-2' src='img/tapada.jpg' alt='' data-img=''></div>
+            <div class='tapada'><img data-id='3' id='img-3' src='img/tapada.jpg' alt='' data-img=''></div>
+            <div class='tapada'><img data-id='4' id='img-4' src='img/tapada.jpg' alt='' data-img=''></div>
+            <div class='tapada'><img data-id='5' id='img-5' src='img/tapada.jpg' alt='' data-img=''></div>
+            <div class='tapada'><img data-id='6' id='img-6' src='img/tapada.jpg' alt='' data-img=''></div>
+            <div class='tapada'><img data-id='7' id='img-7' src='img/tapada.jpg' alt='' data-img=''></div>
+            <div class='tapada'><img data-id='8' id='img-8' src='img/tapada.jpg' alt='' data-img=''></div>
+            <div class='tapada'><img data-id='9' id='img-9' src='img/tapada.jpg' alt='' data-img=''></div>
+            <div class='tapada'><img data-id='10' id='img-10' src='img/tapada.jpg' alt='' data-img=''></div>
+            <div class='tapada'><img data-id='11' id='img-11' src='img/tapada.jpg' alt='' data-img=''></div>
+            <div class='tapada'><img data-id='12' id='img-12' src='img/tapada.jpg' alt='' data-img=''></div>
+        </div>
+        <div class='intentos'>Intentos:<span id='effort'></span> </div>
+    </div>
+
+    <!-- MODAL FINAL CON CARTEL "GANASTE/PERDISTE" + RANKING: -->
+    <div id='modal' class='final hidden'>
+        <p>Ya podes volver a jugar</p>
+        <button class='volver'>Volver a jugar</button>
+        <div class='ranking'>
+            <div class='datos player'>Nombre</div>
+            <div class='datos levell'>Nivel</div>
+            <div class='datos triess'>Intentos</div>
+        </div>
+    </div>
+
+    <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+    <script src='index.js'></script>
+</body>
+
+</html>
